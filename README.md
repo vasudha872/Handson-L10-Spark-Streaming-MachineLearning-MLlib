@@ -1,13 +1,16 @@
 # Handson-L10-Spark-Streaming-MachineLearning-MLlib
 
-** Project Overview **
+## Project Overview **
+
 This project implements a real-time analytics pipeline for a ride-sharing platform using Apache Spark Structured Streaming and MLlib. The system processes streaming ride data, trains machine learning models, and performs real-time predictions for:
 
 Task 4: Real-time fare prediction based on distance
 Task 5: Time-based fare trend prediction using windowed aggregations
 
-** Project Structure **
+## Project Structure
+
 Handson-L10-Spark-Streaming-MachineLearning-MLlib/
+
 ```bash
 │
 ├── README.md                          # This file
@@ -32,7 +35,7 @@ Handson-L10-Spark-Streaming-MachineLearning-MLlib/
 
 ```
 
-** Setup Instructions **
+# Setup Instructions 
 
 Install dependencies:
 
@@ -46,6 +49,7 @@ Verify files:
 ```
 
  # Ensure training-dataset.csv, data_generator.py, task4.py, and task5.py are present
+ 
 Running the Project
 
 For Task 4/Task 5:
@@ -59,11 +63,14 @@ Terminal 2 - Run Tasks:
 ```bash
 python task4.py/task5.py
 ```
-** Challenges and Solutions **
+# Challenges and Solutions 
 
 Challenge 1: Empty Streaming Batches (Task 5)
+
 Problem: Batches showing column headers but no data rows
+
 Root Cause: Using append output mode with windowed aggregations
+
 ```bash
 # Changed from:
 .outputMode("append")
@@ -98,11 +105,11 @@ Solution: Increased watermark tolerance
 
 ## Task 4: Real-Time Fare Prediction
 
-![Task 4 Output](outputimages/task4.png)
+![Task 4 Output](outputimages/task4.jpg)
 
 
 ## Task 5: Time-Based Fare Trend Prediction
 
-![Task 5 Output](outputimages/task5.png)
+![Task 5 Output](outputimages/task5.jpg)
 
 
